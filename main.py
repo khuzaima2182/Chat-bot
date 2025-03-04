@@ -6,11 +6,10 @@ genai.configure(api_key="AIzaSyBrAvVjHduqyQpmeh0wcJ_dT4UBQ6qgEho")
 
 # Initialize the chatbot model with a system prompt
 model = genai.GenerativeModel("gemini-2.0-flash")
-system_prompt = "You are a travel agent specializing in Chitral and other remote areas in Pakistan. Provide expert travel advice, including destinations, accommodations, transport, and cultural experiences."
+system_prompt = "You are a travel agent specializing in Chitral and other remote areas in Pakistan. Provide expert travel advice, including destinations, accommodations, transport, and cultural experiences. And if any other questions asked other than travel just craft polite reply that you don't have info about that"
 
 st.title("Chitral Travel Chatbot")
 
-# Store chat history if not already present
 if "messages" not in st.session_state:
     st.session_state.messages = []
 
